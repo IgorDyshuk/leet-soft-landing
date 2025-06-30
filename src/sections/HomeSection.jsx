@@ -33,7 +33,7 @@ export default function HomeSection() {
                 className="absolute inset-0 w-full h-auto object-cover z-0 video-clamp transform"
             />
 
-            <div className="relative z-10">
+            <div className="relative z-11">
                 <Header/>
             </div>
 

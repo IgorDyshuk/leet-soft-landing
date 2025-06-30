@@ -1,5 +1,5 @@
 import Logo1 from '/src/assets/Logo 1.svg'
-import ArrowDown from "./ArrowDown.jsx";
+import LanguageSelect from "./LanguageSelect.jsx";
 
 export default function Header() {
     return (<div className="flex items-center justify-between uppercase px-clamp py-[32px] text-[1.28rem]
@@ -26,7 +26,7 @@ export default function Header() {
 
 
         <div className={"flex items-center gap-2"}>
-            EN <ArrowDown/>
+            <LanguageSelect/>
         </div>
     </div>)
 }
