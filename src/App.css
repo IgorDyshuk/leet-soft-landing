@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
 
 @theme {
     --font-unbounded: 'Unbounded', sans-serif;
@@ -13,8 +14,6 @@
     --color-ls-grey: #787878;
     --color-ls-lightgrey: #FBFBFB;
     --gradient-ls: linear-gradient(to right, #00F4E6, #2C9AFF);
-
-
 }
 
 @layer utilities {
@@ -24,5 +23,29 @@
 
     .text-gradient-ls {
         @apply bg-gradient-to-br from-[#00F4E6] to-[#2C9AFF] bg-clip-text text-transparent;
+    }
+
+    .hover-gradient-ls {
+        @apply transition duration-300 text-white; /* старт */
+
+        &:hover {
+            @apply bg-gradient-to-br from-[#00F4E6] to-[#2C9AFF] bg-clip-text text-transparent inline-block;
+        }
+    }
+
+    .video-clamp {
+        top: clamp(0rem, -1.4525rem + 4.6479vw, 4.125rem);
+        left: clamp(0rem, -4.7535rem + 15.2113vw, 13.5rem);
+    }
+
+
+    .scale-video-clamp {
+        scale: clamp(1, 0.7 + 1vw, 1.23);
+        transform-origin: top left;
+    }
+
+    .px-clamp {
+        padding-left: clamp(1rem, -2.5795rem + 9.5455vw, 8.875rem);
+        padding-right: clamp(1rem, -2.5795rem + 9.5455vw, 8.875rem);
     }
 }
