@@ -15,7 +15,6 @@ export default function HomeSection() {
                 const scale = Math.max(1, 1.23 - (900 - width) * 0.000575);
                 videoRef.current.style.transform = `scale(${scale})`;
             }
-
         }
 
         updateScale();

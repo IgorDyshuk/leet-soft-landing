@@ -26,7 +26,7 @@
     }
 
     .hover-gradient-ls {
-        @apply transition duration-300 text-white; /* старт */
+        @apply transition duration-300 text-white;
 
         &:hover {
             @apply bg-gradient-to-br from-[#00F4E6] to-[#2C9AFF] bg-clip-text text-transparent inline-block;
@@ -38,14 +38,26 @@
         left: clamp(0rem, -4.7535rem + 15.2113vw, 13.5rem);
     }
 
-
     .scale-video-clamp {
         scale: clamp(1, 0.7 + 1vw, 1.23);
         transform-origin: top left;
     }
 
-    .px-clamp {
-        padding-left: clamp(1rem, -2.5795rem + 9.5455vw, 8.875rem);
-        padding-right: clamp(1rem, -2.5795rem + 9.5455vw, 8.875rem);
+
+    .font-logo-clamp {
+        font-size: clamp(1.3125rem, 1.1373rem + 0.719vw, 2rem);
+    }
+
+    .logo-spacing {
+        gap: clamp(0.6875rem, 0.5123rem + 0.719vw, 1.375rem);
+    }
+
+    .container-px-clamp {
+        padding-left: clamp(1.25rem, -0.6936rem + 7.9739vw, 8.875rem);
+        padding-right: clamp(1.25rem, -0.6936rem + 7.9739vw, 8.875rem);
+    }
+
+    .pt-header-clamp {
+        padding-top: clamp(0.5625rem, 0.1961rem + 1.5033vw, 2rem);
     }
 }

@@ -1,15 +1,11 @@
 import Logo1 from '/src/assets/Logo 1.svg'
 import LanguageSelect from "./LanguageSelect.jsx";
+import Logo from "./Logo.jsx";
 
 export default function Header() {
-    return (<div className="flex items-center justify-between uppercase px-clamp py-[32px] text-[1.28rem]
+    return (<div className="flex items-center justify-between uppercase container-px-clamp pt-header-clamp text-[1.28rem]
         bg-gradient-to-t from-transparent to-black">
-        <div className="flex items-center gap-5.5">
-            <img src={Logo1} alt="Logo" className={"scale-134"}/>
-            <span className=" text-[32px] leading-[130%]">
-                    leet<span className={"text-gradient-ls"}>soft</span>
-                </span>
-        </div>
+        <Logo/>
 
         <div className="flex gap-9.5">
             {['about us', 'our services', 'process', 'tools', 'projects', 'contact'].map((item) => (
