@@ -1,6 +1,6 @@
 import Header from "../components/Header.jsx";
-import videoBg from '/src/assets/videoBg.mp4'
-import {useEffect, useRef} from "react";
+import videoBg from '/src/assets/videoBg.mp4';
+import { useEffect, useRef } from "react";
 
 export default function HomeSection() {
     const videoRef = useRef(null);
@@ -22,29 +22,33 @@ export default function HomeSection() {
         return () => window.removeEventListener('resize', updateScale);
     }, []);
 
-
-
     return (
-        <section className={'relative text-white overflow-x-hidden min-h-screen'}>
-            <video
-                ref={videoRef}
-                src={videoBg} autoPlay loop playsInline
-                className="absolute inset-0 w-full h-auto object-cover z-0 video-clamp transform"
-            />
+        <section className="text-white overflow-x-hidden flex flex-col">
 
-            <div className="relative z-11">
-                <Header/>
+            <div className="z-20 xl:absolute xl:inset-x-0 xl:top-0">
+                <Header />
             </div>
 
-            <div className="relative z-10 h-full min-h-screen px-36.5">
-                <div className={'grid-cols-2'}>
-                    <div className={"flex"}>
+            <div className="relative flex-grow overflow-hidden xl:mt-0">
+                <video
+                    ref={videoRef}
+                    src={videoBg}
+                    autoPlay loop playsInline
+                    className="relative w-full h-auto object-cover video-clamp transform"
+                />
+                <div className={"lg:w-full lg:bg-black lg:h-[200px]"}></div>
+            </div>
 
+            <div className="absolute z-20 container-px-clamp">
+                <div className="grid grid-cols-2">
+                    <div className="flex">
                     </div>
-                    <div className={"grid-rows-3"}></div>
+                    <div className="grid grid-rows-3">
+                        {/* Ваш контент */}
+                    </div>
                 </div>
             </div>
 
         </section>
-    )
+    );
 }

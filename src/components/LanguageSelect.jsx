@@ -28,7 +28,7 @@ export default function LanguageSelect() {
     }, []);
 
     return (
-        <div className="relative" ref={dropdownRef}>
+        <div className="relative z-30" ref={dropdownRef}>
             <button
                 onClick={() => setOpen(!open)}
                 className="flex items-center gap-1 uppercase hover:cursor-pointer"
@@ -37,8 +37,9 @@ export default function LanguageSelect() {
                 <ArrowDown rotate={open}/>
             </button>
 
-            {open && (
-                <ul className="absolute right-0 mt-2 w-19 bg-black bg-opacity-90 border border-white rounded-md shadow-lg">
+                <ul className={`absolute right-0 mt-2 w-18 bg-black bg-opacity-90 border border-white rounded-md shadow-lg transform transition-all duration-500 ease-in-out ${
+                    open ? 'opacity-100 translate-y-1 pointer-events-auto' : 'opacity-0 -translate-y-5 pointer-events-none'
+                }`}>
                     {languages.map((lang) => (
                         <li
                             key={lang}
@@ -49,7 +50,6 @@ export default function LanguageSelect() {
                         </li>
                     ))}
                 </ul>
-            )}
         </div>
     );
 }
