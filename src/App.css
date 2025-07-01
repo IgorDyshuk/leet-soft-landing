@@ -73,4 +73,26 @@
     .header-bg {
         @apply bg-gradient-to-t from-transparent to-black
     }
+
+    .home-head-font-clamp {
+        font-size: clamp(2rem, 1.315rem + 2.8105vw, 4.6875rem);
+    }
+
+    .home-head-padding-clamp {
+        padding-top: clamp(10rem, 7.7143rem + 3.5714vw, 12rem);
+    }
+
+
+    .home-font-clamp {
+        font-size: clamp(1.0325rem, 0.9133rem + 0.4889vw, 1.5rem);
+    }
+
+    .home-info-width-clamp {
+        width: clamp(23rem, 12.8571rem + 26.7857vw, 45rem);
+    }
+
+    .home-scroll-font-clamp {
+        font-size: clamp(1.125rem, 0.8393rem + 0.4464vw, 1.375rem);
+    }
+
 }
