@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from "react";
-import LanguageSelect from "./LanguageSelect.jsx";
-import Logo from "./Logo.jsx";
+import LanguageSelect from "../LanguageSelect.jsx";
+import Logo from "../Logo.jsx";
 import BurgerMenuButton from "./BurgerMenuButton.jsx";
 import BurgerMenu from "./BurgerMenu.jsx";
 

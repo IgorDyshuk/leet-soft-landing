@@ -1,6 +1,6 @@
-import lightning from "../assets/lightning.svg";
-import quality from "../assets/quality.svg"
-import bestPractices from "../assets/bestPractices.svg"
+import lightning from "../../assets/lightning.svg";
+import quality from "../../assets/quality.svg"
+import bestPractices from "../../assets/bestPractices.svg"
 
 export default function AddInfoHome() {
     const addInfo = [
