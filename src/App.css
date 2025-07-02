@@ -67,7 +67,7 @@
     }
 
     .header-font-clamp {
-        font-size: clamp(0.9rem, 0.8031rem + 0.3974vw, 1.28rem);
+        font-size: clamp(1rem, 0.9286rem + 0.2928vw, 1.28rem);
     }
 
     .header-gap-clamp {
@@ -101,5 +101,10 @@
 
     .home-info-padding-clamp {
         margin-top: clamp(1rem, 0.7359rem + 0.8451vw, 1.75rem);
+    }
+
+    .add-info-icon-clamp {
+        width: clamp(2rem, 1.8248rem + 0.719vw, 2.6875rem);
+        height: clamp(2rem, 1.8248rem + 0.719vw, 2.6875rem);
     }
 }

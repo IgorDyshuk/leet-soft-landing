@@ -3,6 +3,8 @@ import videoBg from '/src/assets/videoBg.mp4';
 import {useEffect, useRef} from "react";
 import cirle from "/src/assets/circle.svg";
 import arrow from "/src/assets/arrow.svg";
+import lightning from "/src/assets/lightning.svg";
+import AddInfoHome from "../components/AddInfoHome.jsx";
 
 export default function HomeSection() {
     const videoRef = useRef(null);
@@ -26,7 +28,7 @@ export default function HomeSection() {
     }, []);
 
     return (
-        <section className="text-white overflow-x-hidden flex flex-col">
+        <section className="relative text-white overflow-x-hidden flex flex-col">
 
             <div className="z-30 xl:absolute xl:inset-x-0 xl:top-0">
                 <Header/>
@@ -85,6 +87,7 @@ export default function HomeSection() {
                 </div>
             </div>
 
+            <AddInfoHome/>
 
         </section>
     );
