@@ -3,7 +3,9 @@ import SelectCustomizedServices from "../components/Services/Select Cusimized Se
 
 export default function ServicesSection() {
     return (
-        <div className={"bg-ls-lightgrey container-px-clamp"}>
+        <section id="services" className={"bg-ls-lightgrey container-px-clamp"}
+             style={{paddingBottom:'clamp(2.5rem, 1.7831rem + 2.9412vw, 5.3125rem)'}}
+        >
             <h1 className={"uppercase"}
                 style={{
                     fontSize: "clamp(1.75rem, 1.511rem + 0.9804vw, 2.6875rem)",
@@ -26,6 +28,6 @@ export default function ServicesSection() {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }
