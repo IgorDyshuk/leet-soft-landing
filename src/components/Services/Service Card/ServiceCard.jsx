@@ -1,0 +1,93 @@
+import web from "/src/assets/servicesSvg/web.svg"
+import "./serviceCard.css"
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
+import ServiceCardTags from "./ServiceCardTags.jsx";
+import ServiceCardButton from "./ServiceCardButton.jsx";
+
+export default function ServiceCard() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [closedHeight, setClosedHeight] = useState(0);
+    const cardRef = useRef(null);
+    const [showDescription, setShowDescription] = useState(false);
+
+    useEffect(() => {
+        let timeout;
+        if (isOpen) {
+            timeout = setTimeout(() => setShowDescription(true), 50); // задержка 300мс
+        } else {
+            setShowDescription(false);
+        }
+        return () => clearTimeout(timeout);
+    }, [isOpen]);
+
+    function getResponsiveGap() {
+        const width = window.innerWidth;
+        if (width >= 1280) return 24;
+        return 20;
+    }
+
+    useLayoutEffect(() => {
+        if (cardRef.current) {
+            if (closedHeight === 0 && !isOpen) {
+                const height = cardRef.current.getBoundingClientRect().height;
+                setClosedHeight(height);
+            }
+        }
+    }, [isOpen, closedHeight]);
+
+
+
+    const calculatedHeight = isOpen
+        ? closedHeight * 2 + getResponsiveGap()
+        : closedHeight || "auto";
+
+
+    return (
+        <div
+            ref={cardRef}
+            className="relative bg-white rounded-4xl overflow-hidden flex flex-col card"
+            style={{
+                padding: "clamp(1.15rem, 0.6686rem + 1.3595vw, 2.3rem)",
+                height: isOpen ? calculatedHeight : undefined,
+                transition: "height 0.3s ease-in-out",
+            }}
+        >
+            <img src={web} alt="icon" className="mb-[1.25rem]"
+                 style={{
+                     width: 'clamp(2.2rem, 1.8686rem + 1.3595vw, 3.5rem)',
+                     height: 'clamp(2.2rem, 1.8686rem + 1.3595vw, 3.5rem)'
+                 }}
+            />
+
+            <h2 className="uppercase mb-2 md:mb-3 xl:mb-4"
+                style={{fontSize: 'clamp(1.2rem, 0.9961rem + 0.8366vw, 2rem)'}}
+            >
+                Web Development
+            </h2>
+
+            <div className="pb-2 font-mulish overflow-hidden">
+                <div
+                    className="font-mulish home-font-clamp"
+                    style={{
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        transition: "max-height 0.6s ease-in-out",
+                        maxHeight: showDescription ? "1000px" : "1.5em",
+                        WebkitLineClamp: isOpen ? "unset" : 1
+                    }}
+                >
+                    <span
+                        className="font-bold">We build websites that deliver results and solve real business problems</span>
+                    , from landing pages to e-commerce platforms.
+                </div>
+            </div>
+
+            <ServiceCardTags isOpen={isOpen}/>
+
+            <ServiceCardButton isOpen={isOpen} setIsOpen={setIsOpen} />
+
+        </div>
+    );
+}

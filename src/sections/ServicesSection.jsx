@@ -1,4 +1,4 @@
-import ServiceCard from "../components/Services/ServiceCard.jsx";
+import ServiceCard from "../components/Services/Service Card/ServiceCard.jsx";
 
 export default function ServicesSection() {
     return (
