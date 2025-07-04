@@ -35,3 +35,44 @@
     height: clamp(12.0625rem, 10.2782rem + 7.3203vw, 19.0625rem);
 }
 
+.last-card {
+    height: clamp(12.0625rem, 8.9431rem + 12.7974vw, 24.3rem);
+}
+
+@media (max-width: 1280px) {
+    .last-card {
+        height: clamp(12.0625rem, 10.2782rem + 7.3203vw, 19.0625rem);
+    }
+}
+
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: background 0.2s ease-in-out;
+    background: linear-gradient(to bottom right, #00F4E6, #2C9AFF);
+}
+
+.custom-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, #01E9DC, #1677D0);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: -1;
+}
+
+.custom-card:hover::before {
+    opacity: 1;
+}
+
+.last-card-tags {
+    max-height: 150px;
+}
+
+@media (max-width: 1280px) {
+    .last-card-tags {
+        max-height: clamp(1.9375rem, 1.6667rem + 1.1111vw, 3rem);
+    }
+}

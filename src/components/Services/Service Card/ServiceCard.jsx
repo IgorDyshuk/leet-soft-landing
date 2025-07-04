@@ -4,7 +4,7 @@ import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import ServiceCardTags from "./ServiceCardTags.jsx";
 import ServiceCardButton from "./ServiceCardButton.jsx";
 
-export default function ServiceCard() {
+export default function ServiceCard({height}) {
     const [isOpen, setIsOpen] = useState(false);
     const [closedHeight, setClosedHeight] = useState(0);
     const cardRef = useRef(null);
@@ -45,7 +45,7 @@ export default function ServiceCard() {
     return (
         <div
             ref={cardRef}
-            className="relative bg-white rounded-4xl overflow-hidden flex flex-col card"
+            className={`relative bg-white rounded-4xl overflow-hidden flex flex-col ${height}`}
             style={{
                 padding: "clamp(1.15rem, 0.6686rem + 1.3595vw, 2.3rem)",
                 height: isOpen ? calculatedHeight : undefined,
@@ -84,7 +84,7 @@ export default function ServiceCard() {
                 </div>
             </div>
 
-            <ServiceCardTags isOpen={isOpen}/>
+            <ServiceCardTags isOpen={isOpen} height={height} />
 
             <ServiceCardButton isOpen={isOpen} setIsOpen={setIsOpen} />
 

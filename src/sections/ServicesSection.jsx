@@ -1,4 +1,5 @@
 import ServiceCard from "../components/Services/Service Card/ServiceCard.jsx";
+import SelectCustomizedServices from "../components/Services/Select Cusimized Services/SelectCustomizedServices.jsx";
 
 export default function ServicesSection() {
     return (
@@ -14,14 +15,14 @@ export default function ServicesSection() {
 
             <div className="flex flex-col xl:grid gap-[1.25rem] xl:gap-[1.5rem] xl:grid-cols-2">
                 <div className={"flex flex-col gap-[1.25rem] xl:gap-[1.5rem]"}>
-                    <ServiceCard/>
-                    <ServiceCard/>
-                    <ServiceCard/>
+                    <ServiceCard height={"card"}/>
+                    <ServiceCard height={"card"}/>
+                    <ServiceCard height={"last-card"}/>
                 </div>
                 <div className={"flex flex-col gap-[1.25rem] xl:gap-[1.5rem]"}>
-                    <ServiceCard/>
-                    <ServiceCard/>
-                    <ServiceCard/>
+                    <ServiceCard height={"card"}/>
+                    <ServiceCard height={"card"}/>
+                    <SelectCustomizedServices/>
                 </div>
             </div>
 
