@@ -12,13 +12,20 @@
     --color-ls-white: #FFFFFF;
     --color-ls-black: #000000;
     --color-ls-grey: #787878;
-    --color-ls-lightgrey: #FBFBFB;
+    --color-ls-lightgrey: #F5F5F5;
     --gradient-ls: linear-gradient(to right, #00F4E6, #2C9AFF);
 }
 
 @layer utilities {
     .bg-gradient-ls {
         @apply bg-gradient-to-r from-[#00F4E6] to-[#2C9AFF];
+    }
+
+    .bg-hover-gradient-ls {
+        @apply transition duration-300;
+        &:hover {
+            @apply bg-gradient-to-r from-[#00F4E6] to-[#2C9AFF];
+        }
     }
 
     .text-gradient-ls {
@@ -106,5 +113,9 @@
     .add-info-icon-clamp {
         width: clamp(2rem, 1.8248rem + 0.719vw, 2.6875rem);
         height: clamp(2rem, 1.8248rem + 0.719vw, 2.6875rem);
+    }
+
+    .clip-path {
+        @apply mask-clip-padding: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)
     }
 }

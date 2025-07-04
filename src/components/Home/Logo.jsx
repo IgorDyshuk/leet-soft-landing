@@ -1,4 +1,4 @@
-import Logo1 from "../../assets/Logo 1.svg";
+import Logo1 from "../../assets/homeSvg/Logo 1.svg";
 import {useEffect, useRef} from "react";
 
 export default function Logo() {

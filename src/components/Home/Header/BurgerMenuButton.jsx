@@ -1,5 +1,4 @@
 import LanguageSelect from "../LanguageSelect.jsx";
-import {Menu, X} from "lucide-react";
 import BurgerIcon from "./BurgerIcon.jsx";
 
 export default function BurgerMenuButton({open, setOpen}) {

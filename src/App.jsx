@@ -1,6 +1,7 @@
 import './App.css'
 import HomeSection from "./sections/HomeSection.jsx";
 import {useEffect, useState} from "react";
+import ServicesSection from "./sections/ServicesSection.jsx";
 
 function App() {
     const [zoomStyle, setZoomStyle] = useState({});
@@ -23,6 +24,8 @@ function App() {
     return (
         <div className={"font-unbounded"} style={zoomStyle}>
             <HomeSection/>
+
+            <ServicesSection/>
         </div>
     )
 }

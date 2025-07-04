@@ -1,5 +1,5 @@
-import cirle from "../../assets/circle.svg";
-import arrow from "../../assets/arrow.svg";
+import cirle from "../../assets/homeSvg/circle.svg";
+import arrow from "../../assets/homeSvg/arrow.svg";
 
 export default function SloganHome() {
     return (

@@ -1,0 +1,37 @@
+.cutout::after {
+    width: 42%;
+    height: 40%;
+    content: "";
+    position: absolute;
+    background:  white;
+    top: -37%;
+    right: 9%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    box-shadow: clamp(0.5625rem, 0.4032rem + 0.6536vw, 1.1875rem) clamp(0.875rem, 0.7953rem + 0.3268vw, 1.1875rem) #F5F5F5;
+}
+
+.cutout::before {
+    width: 40%;
+    height: 42%;
+    content: "";
+    position: absolute;
+    background:  white;
+    left: -37%;
+    bottom: 9%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    box-shadow: 19px clamp(0.5625rem, 0.4032rem + 0.6536vw, 1.1875rem) #F5F5F5;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .hover-gradient-desktop:hover {
+        background: linear-gradient(90deg, #00F4E6 0%, #2C9AFF 100%);
+    }
+}
+
+.card {
+    height: clamp(12.0625rem, 10.2782rem + 7.3203vw, 19.0625rem);
+}
+

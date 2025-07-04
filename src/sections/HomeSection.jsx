@@ -5,8 +5,6 @@ import VideoHome from "../components/Home/VideoHome.jsx";
 
 export default function HomeSection() {
 
-
-
     return (
         <section className="relative text-white overflow-x-hidden flex flex-col">
 

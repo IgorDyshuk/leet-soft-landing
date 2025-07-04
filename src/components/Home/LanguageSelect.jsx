@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import ArrowDown from "./ArrowDown.jsx";
+import ArrowDown from "../ArrowDown.jsx";
 
 
 export default function LanguageSelect() {
