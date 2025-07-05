@@ -3,9 +3,14 @@ import HomeSection from "./sections/HomeSection.jsx";
 import {useEffect, useState} from "react";
 import ServicesSection from "./sections/ServicesSection.jsx";
 import AboutUsSection from "./sections/AboutUsSection.jsx";
+import LoadingSection from "./sections/LoadingSection.jsx";
 
 function App() {
     const [zoomStyle, setZoomStyle] = useState({});
+    const [loading, setLoading] = useState(() => {
+        const alreadyVisited = sessionStorage.getItem("alreadyVisited");
+        return !alreadyVisited;
+    });
 
     useEffect(() => {
         function updateZoom() {
@@ -23,12 +28,32 @@ function App() {
     }, []);
 
     return (
-        <div className={"font-unbounded"} style={zoomStyle}>
-            <HomeSection/>
+        <div className={"font-unbounded bg-black"} style={zoomStyle} >
 
-            <ServicesSection/>
 
-            <AboutUsSection/>
+            {loading && (
+                <LoadingSection
+                    onFinish={() => {
+                        sessionStorage.setItem("alreadyVisited", "true");
+                        setLoading(false);
+                    }}
+                />
+            )}
+
+
+            <div
+                className={`
+                    transition-opacity duration-350 ease-in-out
+                    ${loading ? "opacity-0 pointer-events-none" : "opacity-100"}
+                `}
+                style={{
+                    visibility: loading ? "hidden" : "visible"
+                }}
+            >
+                <HomeSection/>
+                <ServicesSection/>
+                <AboutUsSection/>
+            </div>
         </div>
     )
 }

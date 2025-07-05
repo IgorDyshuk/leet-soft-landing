@@ -18,7 +18,7 @@ export default function AboutUsSection() {
     return (
         <section
             id={"about"}
-            className={"container-px-clamp relative"}
+            className={"container-px-clamp relative bg-white"}
             style={{
                 paddingTop: "clamp(5rem, 3.7255rem + 5.2288vw, 10rem)",
                 paddingBottom: "clamp(5rem, 3.7255rem + 5.2288vw, 10rem)",

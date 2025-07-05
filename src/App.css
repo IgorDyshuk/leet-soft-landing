@@ -129,3 +129,13 @@
         padding: clamp(1.25rem, 0.7083rem + 2.2222vw, 3.375rem);
     }
 }
+
+@keyframes dot-bounce-up {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-0.2em);
+    }
+}
+
