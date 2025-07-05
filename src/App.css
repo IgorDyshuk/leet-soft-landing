@@ -115,7 +115,17 @@
         height: clamp(2rem, 1.8248rem + 0.719vw, 2.6875rem);
     }
 
-    .clip-path {
-        @apply mask-clip-padding: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)
+    .section-h1-clamp {
+        font-size: clamp(1.75rem, 1.511rem + 0.9804vw, 2.6875rem);
+    }
+}
+
+.about-padding {
+    padding: clamp(1.25rem, 0.7083rem + 2.2222vw, 3.375rem) 0 clamp(1.25rem, 0.7083rem + 2.2222vw, 3.375rem) clamp(1.25rem, 0.7083rem + 2.2222vw, 3.375rem);
+}
+
+@media screen and (max-width: 1024px) {
+    .about-padding {
+        padding: clamp(1.25rem, 0.7083rem + 2.2222vw, 3.375rem);
     }
 }

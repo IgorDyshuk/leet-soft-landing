@@ -2,6 +2,7 @@ import './App.css'
 import HomeSection from "./sections/HomeSection.jsx";
 import {useEffect, useState} from "react";
 import ServicesSection from "./sections/ServicesSection.jsx";
+import AboutUsSection from "./sections/AboutUsSection.jsx";
 
 function App() {
     const [zoomStyle, setZoomStyle] = useState({});
@@ -26,6 +27,8 @@ function App() {
             <HomeSection/>
 
             <ServicesSection/>
+
+            <AboutUsSection/>
         </div>
     )
 }
