@@ -17,8 +17,7 @@ export default function ServiceCardTags({tags, isOpen, height}) {
 
     return (<div
         className=
-            {`flex transition-all duration-500 ease-in-out flex-wrap gap-3 xl:gap-4 mt-auto 
-            w-[17rem] sm:w-[32rem] md:w-[35rem] lg:w-[45rem] xl:w-[30rem] 2xl:w-[40rem]
+            {`flex transition-all duration-500 ease-in-out flex-wrap gap-3 xl:gap-4 mt-auto tags-width
             ${showTags ? 'max-h-[250px]' : ''}
             ${!showTags && height === 'last-card' ? 'last-card-tags' : ''}
             ${!showTags && height !== 'last-card' ? 'max-h-[clamp(1.9375rem,1.6667rem+1.1111vw,3rem)]' : ''}

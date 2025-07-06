@@ -37,13 +37,39 @@ export default function ServiceCard({card, height}) {
 
 
     const multiplier = (() => {
-        if (width <= 639) {
-            if (height === 'last-card') return 2;
-            return 2.7;
+        if (height === 'last-card') {
+            if (width <= 480) return 2.6;
+            if (width <= 639) return 2.2;
+            if (width <= 768) return 1.7;
+            if (width <= 1024) return 1.5;
+            if (width <= 1280) return 1.4;
+            if (width <= 1535) return 1.4;
+            return 1.5;
         }
-        if (height === 'last-card') return 1.5;
+
+        if (height === 'card first-card') {
+            if (width <= 471) return 3.2;
+            if (width <= 490) return 2.5;
+            if (width <= 639) return 2.2;
+            if (width <= 768) return 2.1;
+            if (width <= 1024) return 1.9;
+            if (width <= 1280) return 1.8;
+            if (width <= 1555) return 2.1;
+            return 2;
+        }
+
+        // default for other cards
+        if (width <= 480) return 2.8;
+        if (width <= 565) return 2.02;
+        if (width <= 639) return 1.9;
+        if (width <= 768) return 2;
+        if (width <= 1024) return 1.8;
+        if (width <= 1280) return 1.7;
+        if (width <= 1535) return 2.2;
         return 2;
     })();
+
+
 
     const calculatedHeight =
         width > 639
@@ -76,15 +102,15 @@ export default function ServiceCard({card, height}) {
 
             <div className="pb-2 font-mulish overflow-hidden">
                 <div
-                    className="font-mulish home-font-clamp"
+                    className={`font-mulish home-font-clamp ${isOpen ? '' : 'description-width'}`}
                     style={{
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
-                        transition: "max-height 0.6s ease-in-out",
+                        transition: "width max-height 0.6s ease-in-out",
                         maxHeight: showDescription ? "1000px" : "1.5em",
-                        WebkitLineClamp: isOpen ? "unset" : 1
+                        WebkitLineClamp: isOpen ? "unset" : 1,
                     }}
                 >
                     <span

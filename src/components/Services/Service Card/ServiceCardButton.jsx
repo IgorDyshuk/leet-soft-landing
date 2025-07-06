@@ -20,9 +20,10 @@ export default function ServiceCardButton({isOpen, setIsOpen}) {
                 }}
             >
                 <div
-                    className={`transition-transform duration-300 ease-in-out transform
-                        ${isOpen ? "-rotate-45" : "group-hover:rotate-45"} `}
+                    className={`transform transition-transform duration-250 ease-in-out
+                    ${isOpen ? "-rotate-45" : "rotate-desktop"}`}
                 >
+
                     <svg
                         width="21"
                         height="21"
@@ -41,8 +42,8 @@ export default function ServiceCardButton({isOpen, setIsOpen}) {
                         <path
                             d="M13.5876 6.11792L4.05883 15.6468C3.58785 16.1177 2.82423 16.1177 2.35324 15.6468C1.88227 15.1758 1.88225 14.4122 2.35319 13.9412L11.8809 4.41237H3.93819C3.27203 4.41237 2.73201 3.87234 2.73201 3.20619C2.73201 2.54003 3.27203 2 3.93819 2H14.272C15.2263 2 16 2.77365 16 3.728V14.0619C16 14.728 15.46 15.268 14.7938 15.268C14.1277 15.268 13.5876 14.728 13.5876 14.0619V6.11792Z"
                             fill="url(#arrow-gradient)"
-                            className={`transition-all duration-200 ease-in-out group-hover:fill-white
-                                ${isOpen ? "fill-white" : "group-hover:fill-white"}`}
+                            className={`transition-all duration-250 ease-in-out
+                                ${isOpen ? "fill-white" : "fill-desktop"}`}
                         />
                     </svg>
                 </div>

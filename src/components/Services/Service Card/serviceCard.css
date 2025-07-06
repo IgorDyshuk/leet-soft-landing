@@ -25,9 +25,25 @@
     box-shadow: 19px clamp(0.5625rem, 0.4032rem + 0.6536vw, 1.1875rem) #F5F5F5;
 }
 
+.rotate-desktop {
+    transition: transform 0.25s ease-in-out;
+}
+
+.fill-desktop {
+    transition: fill 0.25s ease-in-out;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .hover-gradient-desktop:hover {
         background: linear-gradient(90deg, #00F4E6 0%, #2C9AFF 100%);
+    }
+
+    .group:hover .rotate-desktop {
+        transform: rotate(45deg);
+    }
+
+    .group:hover .fill-desktop {
+        fill: white;
     }
 }
 
@@ -75,6 +91,14 @@
     height: clamp(24rem, 16rem + 10vw, 28rem);
 }
 
+.description-width {
+    width: clamp(30.625rem, 4.3134rem + 32.8638vw, 43.75rem);
+}
+
+.tags-width {
+    width: clamp(28.4375rem, 10.27rem + 22.6917vw, 37.5rem);
+}
+
 @media (max-width: 1281px) {
     .last-card {
         height: clamp(12.0625rem, 10.2782rem + 7.3203vw, 19.0625rem);
@@ -86,6 +110,14 @@
 
     .last-card-tags {
         max-height: clamp(1.9375rem, 1.6667rem + 1.1111vw, 3rem);
+    }
+
+    .description-width {
+        width: clamp(15.625rem, -2.2283rem + 79.3478vw, 61.25rem);
+    }
+
+    .tags-width {
+        width: clamp(14.0625rem, 5.2514rem + 40.2793vw, 37.5rem);
     }
 }
 

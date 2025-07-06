@@ -8,7 +8,7 @@ export default function ServicesSection() {
     const [rightColumn, setRightColumn] = useState([]);
 
     const cardsLeft = [
-        <ServiceCard card={serviceCards[0]} key="l1" height="card" />,
+        <ServiceCard card={serviceCards[0]} key="l1" height="card first-card" />,
         <ServiceCard card={serviceCards[2]} key="l2" height="card" />,
         <ServiceCard card={serviceCards[4]} key="l3" height="last-card" />
     ];
@@ -46,7 +46,7 @@ export default function ServicesSection() {
 
     return (
         <section id="services" className={"bg-ls-lightgrey container-px-clamp"}
-             style={{paddingBottom:'clamp(2.5rem, 1.7831rem + 2.9412vw, 5.3125rem)'}}
+                 style={{paddingBottom:'clamp(2.5rem, 1.7831rem + 2.9412vw, 5.3125rem)'}}
         >
             <h1 className={"uppercase section-h1-clamp"}
                 style={{
