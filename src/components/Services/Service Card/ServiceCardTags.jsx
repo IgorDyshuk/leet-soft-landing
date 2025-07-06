@@ -1,14 +1,13 @@
 import {useEffect, useState} from "react";
 
-export default function ServiceCardTags({isOpen, height}) {
-    const tags = ["Web Platforms", "Corporate Sites", "E-commerce", "Landing page"];
+export default function ServiceCardTags({tags, isOpen, height}) {
 
     const [showTags, setShowTags] = useState(false);
 
     useEffect(() => {
         let timeout;
         if (isOpen) {
-            timeout = setTimeout(() => setShowTags(true), 50); // задержка 300мс
+            timeout = setTimeout(() => setShowTags(true), 10);
         } else {
             setShowTags(false);
         }
@@ -19,8 +18,8 @@ export default function ServiceCardTags({isOpen, height}) {
     return (<div
         className=
             {`flex transition-all duration-500 ease-in-out flex-wrap gap-3 xl:gap-4 mt-auto 
-            w-[18rem] sm:w-[32rem] md:w-[40rem] lg:w-[45rem] xl:w-[30rem] 2xl:w-[40rem]
-            ${showTags ? 'max-h-[150px]' : ''}
+            w-[17rem] sm:w-[32rem] md:w-[35rem] lg:w-[45rem] xl:w-[30rem] 2xl:w-[40rem]
+            ${showTags ? 'max-h-[250px]' : ''}
             ${!showTags && height === 'last-card' ? 'last-card-tags' : ''}
             ${!showTags && height !== 'last-card' ? 'max-h-[clamp(1.9375rem,1.6667rem+1.1111vw,3rem)]' : ''}
                 `}

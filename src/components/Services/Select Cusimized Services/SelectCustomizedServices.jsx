@@ -4,7 +4,7 @@ import ContactButton from "../../ContactButton.jsx";
 export default function SelectCustomizedServices() {
     return (
         <div
-            className="w-fit relative bg-white rounded-4xl overflow-hidden flex flex-col"
+            className="w-fit relative bg-white rounded-4xl overflow-hidden flex flex-col select-card"
             style={{
                 padding: "clamp(1.15rem, 0.6686rem + 1.3595vw, 2.3rem)",
             }}
@@ -26,7 +26,8 @@ export default function SelectCustomizedServices() {
                 <div
                     className="font-mulish home-font-clamp leading-[1.3] pb-[0.3rem]"
                 >
-                    Seeking a reliable Software Development Company? Look no further! Our IT Consulting firm specializes in providing tailored solutions for your software development needs.
+                    Have a unique idea in mind? <br />
+                    If you don’t see your project type listed, let’s talk. We’re always excited to explore new challenges and bring bold ideas to life. Share your vision with us — we’ll help you shape it into a powerful, working solution.
                 </div>
             </div>
 
