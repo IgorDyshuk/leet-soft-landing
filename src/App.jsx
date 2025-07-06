@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import ServicesSection from "./sections/ServicesSection.jsx";
 import AboutUsSection from "./sections/AboutUsSection.jsx";
 import LoadingSection from "./sections/LoadingSection.jsx";
+import ProjectsSections from "./sections/ProjectsSections.jsx";
 
 function App() {
     const [zoomStyle, setZoomStyle] = useState({});
@@ -40,7 +41,6 @@ function App() {
                 />
             )}
 
-
             <div
                 className={`
                     transition-opacity duration-350 ease-in-out
@@ -53,6 +53,7 @@ function App() {
                 <HomeSection/>
                 <ServicesSection/>
                 <AboutUsSection/>
+                <ProjectsSections/>
             </div>
         </div>
     )
