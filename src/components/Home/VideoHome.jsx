@@ -31,7 +31,10 @@ export default function VideoHome() {
                 <video
                     ref={videoRef}
                     src={videoBg}
-                    autoPlay loop playsInline
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
                     className="relative w-full h-auto object-cover transform scale-220 lg:scale-123"
                 />
                 <div className={"absolute bottom-0 w-full bg-gradient-to-b from-transparent to-black " +
