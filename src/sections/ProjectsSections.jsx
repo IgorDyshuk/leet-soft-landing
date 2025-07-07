@@ -22,7 +22,7 @@ export default function ProjectsSections() {
     return (<section
             id={"projects"}
             className={"bg-white"}
-            style={{marginBottom: "clamp(4.875rem, 3.7325rem + 5.2229vw, 10rem)"}}
+            style={{paddingBottom: "clamp(4.875rem, 3.7325rem + 5.2229vw, 10rem)"}}
         >
             <h1 className={"uppercase section-h1-clamp container-px-clamp "}
                 style={{paddingBottom: "clamp(1rem, 0.7451rem + 1.0458vw, 2rem)"}}
