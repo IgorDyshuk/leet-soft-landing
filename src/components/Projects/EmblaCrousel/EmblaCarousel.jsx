@@ -1,8 +1,8 @@
 import React from 'react'
-import {projects} from "../Projects.js";
+// import {projects} from "../Projects.js";
 import ProjectCard from "../ProjectCard.jsx";
 
-const EmblaCarousel = ({emblaRef}) => {
+const EmblaCarousel = ({emblaRef, projects}) => {
 
     return (
         <div className="embla">

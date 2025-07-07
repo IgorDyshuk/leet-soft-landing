@@ -3,13 +3,23 @@ import "/src/components/Projects/Projects.css"
 import '/src/components/Projects/EmblaCrousel/embla.css'
 import EmblaCarousel from "../components/Projects/EmblaCrousel/EmblaCarousel.jsx";
 import useEmblaCarousel from "embla-carousel-react";
+import {projects} from "../components/Projects/Projects.js";
+import {useMemo, useState} from "react";
 
 export default function ProjectsSections() {
-    const OPTIONS = { align: 'center' }
+    const OPTIONS = {align: 'center'}
     const SLIDE_COUNT = 5
     const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
     const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
 
+    const [activeFilter, setActiveFilter] = useState("All Projects")
+
+    const filteredProjects = useMemo(() => {
+        if (activeFilter === "All Projects") return projects
+        return projects.filter((project) =>
+            project.filters.includes(activeFilter)
+        )
+    }, [activeFilter])
 
     return (
         <section id={"projects"} className={"bg-white overflow-hidden"}>
@@ -20,10 +30,10 @@ export default function ProjectsSections() {
                     projects
                 </h1>
 
-                <ProjectsHeader emblaApi={emblaApi}/>
+                <ProjectsHeader emblaApi={emblaApi} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
             </div>
 
-            <EmblaCarousel slides={SLIDES} emblaRef={emblaRef} options={OPTIONS} />
+            <EmblaCarousel projects={filteredProjects} slides={SLIDES} emblaRef={emblaRef} options={OPTIONS}/>
         </section>
     )
 }

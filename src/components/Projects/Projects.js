@@ -20,7 +20,7 @@ export const projects = [
         title: "Revolutionizing Knowledge",
         image: secondProject,
         description: "Team augmentation for all-in-one whitelabel solution to create, brand, and launch your app store platform",
-        filters: ["SaaS", "Web"],
+        filters: ["SaaS", "Mobile App"],
         country: {
             flag: canada,
             name: "Canada",
