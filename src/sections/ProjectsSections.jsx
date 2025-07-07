@@ -20,18 +20,21 @@ export default function ProjectsSections() {
     }, [activeFilter])
 
     return (<section
-            id={"projects"}
-            className={"bg-white"}
-            style={{paddingBottom: "clamp(4.875rem, 3.7325rem + 5.2229vw, 10rem)"}}
+        id={"projects"}
+        className={"bg-white"}
+        style={{
+            paddingTop: "clamp(2.5rem, 1.9427rem + 2.5478vw, 5rem)",
+            paddingBottom: "clamp(4.875rem, 3.7325rem + 5.2229vw, 10rem)"
+        }}
+    >
+        <h1 className={"uppercase section-h1-clamp container-px-clamp "}
+            style={{paddingBottom: "clamp(1rem, 0.7451rem + 1.0458vw, 2rem)"}}
         >
-            <h1 className={"uppercase section-h1-clamp container-px-clamp "}
-                style={{paddingBottom: "clamp(1rem, 0.7451rem + 1.0458vw, 2rem)"}}
-            >
-                projects
-            </h1>
+            projects
+        </h1>
 
-            <ProjectsHeader emblaApi={emblaApi} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
+        <ProjectsHeader emblaApi={emblaApi} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
 
-            <EmblaCarousel projects={filteredProjects} slides={SLIDES} emblaRef={emblaRef} options={OPTIONS}/>
-        </section>)
+        <EmblaCarousel projects={filteredProjects} slides={SLIDES} emblaRef={emblaRef} options={OPTIONS}/>
+    </section>)
 }

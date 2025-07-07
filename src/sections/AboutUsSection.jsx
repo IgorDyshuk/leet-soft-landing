@@ -21,7 +21,7 @@ export default function AboutUsSection() {
             className={"container-px-clamp relative bg-white"}
             style={{
                 paddingTop: "clamp(5rem, 3.7255rem + 5.2288vw, 10rem)",
-                paddingBottom: "clamp(5rem, 3.7255rem + 5.2288vw, 10rem)",
+                paddingBottom: "clamp(2.5rem, 1.9427rem + 2.5478vw, 5rem)",
             }}
         >
 

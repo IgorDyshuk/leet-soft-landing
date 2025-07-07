@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 import LanguageSelect from "../LanguageSelect.jsx";
 import Logo from "../Logo.jsx";
 import BurgerMenuButton from "./BurgerMenuButton.jsx";
@@ -8,11 +8,11 @@ export default function Header() {
     const [open, setOpen] = useState(false);
 
     const menuItems = [
-        { id: 'about', label: 'about us' },
         { id: 'services', label: 'our services' },
-        { id: 'process', label: 'process' },
-        { id: 'tools', label: 'tools' },
+        { id: 'about', label: 'about us' },
         { id: 'projects', label: 'projects' },
+        { id: 'tools', label: 'tools' },
+        { id: 'our team', label: 'our team' },
         { id: 'contact', label: 'contact' }
     ];
 
