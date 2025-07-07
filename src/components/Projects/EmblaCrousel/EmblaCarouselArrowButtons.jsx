@@ -41,7 +41,7 @@ export const PrevButton = (props) => {
         <button
             className={`rounded-full flex items-center justify-center cursor-pointer group bg-gradient-ls 
             transition-all duration-200 ease-in-out disabled:opacity-40`}
-            style={{width: '53px', height: '53px'}}
+            style={{width: 'clamp(2.375rem, 2.166rem + 0.9554vw, 3.3125rem)', height: 'clamp(2.375rem, 2.166rem + 0.9554vw, 3.3125rem)'}}
             type="button"
             {...restProps}
         >
@@ -82,7 +82,7 @@ export const NextButton = (props) => {
         <button
             className={`rounded-full flex items-center justify-center cursor-pointer group bg-gradient-ls 
             transition-all duration-200 ease-in-out disabled:opacity-40`}
-            style={{width: '53px', height: '53px'}}
+            style={{width: 'clamp(2.375rem, 2.166rem + 0.9554vw, 3.3125rem)', height: 'clamp(2.375rem, 2.166rem + 0.9554vw, 3.3125rem)'}}
             type="button"
             {...restProps}
         >

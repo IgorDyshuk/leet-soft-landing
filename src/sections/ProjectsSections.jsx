@@ -16,24 +16,22 @@ export default function ProjectsSections() {
 
     const filteredProjects = useMemo(() => {
         if (activeFilter === "All Projects") return projects
-        return projects.filter((project) =>
-            project.filters.includes(activeFilter)
-        )
+        return projects.filter((project) => project.filters.includes(activeFilter))
     }, [activeFilter])
 
-    return (
-        <section id={"projects"} className={"bg-white overflow-hidden"}>
-            <div className={"container-px-clamp "}>
-                <h1 className={"uppercase section-h1-clamp"}
-                    style={{paddingBottom: "clamp(1rem, 0.7451rem + 1.0458vw, 2rem)"}}
-                >
-                    projects
-                </h1>
+    return (<section
+            id={"projects"}
+            className={"bg-white"}
+            style={{marginBottom: "clamp(4.875rem, 3.7325rem + 5.2229vw, 10rem)"}}
+        >
+            <h1 className={"uppercase section-h1-clamp container-px-clamp "}
+                style={{paddingBottom: "clamp(1rem, 0.7451rem + 1.0458vw, 2rem)"}}
+            >
+                projects
+            </h1>
 
-                <ProjectsHeader emblaApi={emblaApi} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
-            </div>
+            <ProjectsHeader emblaApi={emblaApi} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
 
             <EmblaCarousel projects={filteredProjects} slides={SLIDES} emblaRef={emblaRef} options={OPTIONS}/>
-        </section>
-    )
+        </section>)
 }

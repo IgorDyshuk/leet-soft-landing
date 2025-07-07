@@ -3,7 +3,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 11px 22px;
+    padding: clamp(0.4375rem, 0.3818rem + 0.2548vw, 0.6875rem) clamp(0.9375rem, 0.84rem + 0.4459vw, 1.375rem);
     border-radius: 9999px;
     background-color: #f3f4f6;
     transition: all 0.3s ease-in-out;
@@ -46,11 +46,13 @@
 }
 
 .project-filter {
-    padding: 8px 16px;
+    padding: clamp(0.3125rem, 0.2707rem + 0.1911vw, 0.5rem) clamp(0.6875rem, 0.6178rem + 0.3185vw, 1rem);
     color: white;
     border-radius: 32px;
     background: rgba(0, 0, 0, 0.11);
     backdrop-filter: blur(6px);
+    width: fit-content;
+    text-wrap: nowrap;
 }
 
 .underline-gradient {

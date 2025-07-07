@@ -1,10 +1,14 @@
 export default function OpenCaseButton() {
     return (
-        <button className={" mt-[24px] uppercase flex text-gradient-ls flex items-center gap-[11px] "}
-                style={{fontSize: "clamp(1rem, 0.9203rem + 0.3268vw, 1.3125rem)",}}
+        <button className={"uppercase flex text-gradient-ls flex items-center"}
+                style={{
+                    fontSize: "clamp(1rem, 0.9203rem + 0.3268vw, 1.3125rem)",
+                    marginTop: "clamp(1.0625rem, 0.965rem + 0.4459vw, 1.5rem)",
+                    gap: 'clamp(0.5rem, 0.4582rem + 0.1911vw, 0.6875rem)'
+                }}
         >
 
-            <span className={"underline-gradient"}>open case</span>
+            <span className={"underline-gradient text-gradient-ls"}>open case</span>
             <svg
                 width="21"
                 height="21"
