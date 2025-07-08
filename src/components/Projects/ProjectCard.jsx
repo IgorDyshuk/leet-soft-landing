@@ -1,6 +1,6 @@
 import OpenCaseButton from "./OpenCaseButton.jsx";
 
-export default function ProjectCard({project}) {
+export default function ProjectCard({item}) {
     return (
         <div className="project-card bg-ls-lightgrey rounded-4xl"
              style={{
@@ -8,7 +8,7 @@ export default function ProjectCard({project}) {
              }}
         >
             <div className={"relative"}>
-                <img src={project.image} alt="" width={"469px"}/>
+                <img src={item.image} alt="" width={"469px"}/>
                 <div className={"absolute top-[16px] left-[21px] flex flex-col sm:flex-row font-mulish font-bold"}
                      style={{
                          fontSize: "clamp(1rem, 0.9203rem + 0.3268vw, 1.3125rem)",
@@ -18,12 +18,12 @@ export default function ProjectCard({project}) {
                     <span className={"flex project-filter"}
                           style={{gap: "clamp(0.5rem, 0.4582rem + 0.1911vw, 0.6875rem)"}}
                     >
-                        <img src={project.country.flag} alt="country flag"
+                        <img src={item.country.flag} alt="country flag"
                              style={{width: 'clamp(1.625rem, 1.4996rem + 0.5732vw, 2.1875rem)'}}
                         />
-                        {project.country.name}
+                        {item.country.name}
                     </span>
-                    {project.filters.map((filter, index) => (
+                    {item.filters.map((filter, index) => (
                         <span key={index} className={"project-filter"}>
                             {filter}
                         </span>
@@ -37,12 +37,12 @@ export default function ProjectCard({project}) {
                     marginTop: "clamp(1rem, 0.7771rem + 1.0191vw, 2rem)"
                 }}
             >
-                {project.title}
+                {item.title}
             </h2>
 
             <p className={"font-mulish home-font-clamp text-ls-grey"}
             style={{marginTop: 'clamp(0.5rem, 0.4582rem + 0.1911vw, 0.6875rem)'}}>
-                {project.description}
+                {item.description}
             </p>
 
             <OpenCaseButton/>

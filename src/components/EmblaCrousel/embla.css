@@ -1,8 +1,11 @@
 .embla {
     margin-top: clamp(1.5rem, 1.3885rem + 0.5096vw, 2rem);
     --slide-size: clamp(19.4375rem, 16.2886rem + 14.3949vw, 33.5625rem);
-    /*--slide-size: calc(28% - clamp(28rem, 14.4013rem + 3.8854vw, 89%));*/
 
+}
+
+.embla-reviews {
+    margin-top: clamp(1.9375rem, 1.8121rem + 0.5732vw, 2.5rem);
 }
 
 .embla__viewport {
@@ -16,6 +19,8 @@
 .embla__slide {
     flex: 0 0 var(--slide-size);
     padding-right: 21px;
+    display: flex;
+    align-items: stretch;
 }
 
 .embla__slide:first-child {

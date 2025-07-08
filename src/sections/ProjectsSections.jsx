@@ -1,7 +1,7 @@
 import ProjectsHeader from "../components/Projects/ProjectsHeader.jsx";
 import "/src/components/Projects/Projects.css"
-import '/src/components/Projects/EmblaCrousel/embla.css'
-import EmblaCarousel from "../components/Projects/EmblaCrousel/EmblaCarousel.jsx";
+import '/src/components/EmblaCrousel/embla.css'
+import EmblaCarousel from "../components/EmblaCrousel/EmblaCarousel.jsx";
 import useEmblaCarousel from "embla-carousel-react";
 import {projects} from "../components/Projects/Projects.js";
 import {useMemo, useState} from "react";
@@ -35,6 +35,13 @@ export default function ProjectsSections() {
 
         <ProjectsHeader emblaApi={emblaApi} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
 
-        <EmblaCarousel projects={filteredProjects} slides={SLIDES} emblaRef={emblaRef} options={OPTIONS}/>
+        <EmblaCarousel
+            card = {"project"}
+            items={filteredProjects}
+            slides={SLIDES}
+            emblaRef={emblaRef}
+            options={OPTIONS}
+            styles={"embla"}
+        />
     </section>)
 }

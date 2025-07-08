@@ -1,4 +1,4 @@
-import {NextButton, PrevButton, usePrevNextButtons} from "./EmblaCrousel/EmblaCarouselArrowButtons.jsx";
+import {NextButton, PrevButton, usePrevNextButtons} from "../EmblaCrousel/EmblaCarouselArrowButtons.jsx";
 
 export default function ProjectsHeader({ emblaApi, activeFilter, setActiveFilter }) {
     const filters = ["All Projects", "SaaS", "Web", "Mobile App", "Web3", "Blockchain"]
