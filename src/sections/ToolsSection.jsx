@@ -1,6 +1,5 @@
 import {tools} from "../components/Tools/tools.js";
 import ToolContainer from "../components/Tools/ToolContainer.jsx";
-import "/src/components/Tools/tools.css"
 
 export default function ToolsSection() {
 
@@ -21,7 +20,6 @@ export default function ToolsSection() {
             className="flex flex-wrap xl:flex-nowrap justify-center gap-x-[0px] sm:gap-x-[8px] gap-y-[20px] container-px-clamp"
             style={{
                 marginTop: "clamp(2.375rem, 2.1521rem + 1.0191vw, 3.375rem)",
-                gapX: ""
             }}
         >
             {tools.map((tool) => (

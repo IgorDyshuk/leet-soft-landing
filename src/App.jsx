@@ -8,6 +8,7 @@ import ProjectsSections from "./sections/ProjectsSections.jsx";
 import PartnersSection from "./sections/PartnersSection.jsx";
 import ReviewsSection from "./sections/ReviewsSection.jsx";
 import ToolsSection from "./sections/ToolsSection.jsx";
+import TeamSection from "./sections/TeamSection.jsx";
 
 function App() {
     const [zoomStyle, setZoomStyle] = useState({});
@@ -60,6 +61,7 @@ function App() {
                 <PartnersSection/>
                 <ReviewsSection/>
                 <ToolsSection/>
+                <TeamSection/>
             </div>
         </div>
     )
