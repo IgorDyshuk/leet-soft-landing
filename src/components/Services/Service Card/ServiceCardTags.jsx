@@ -28,7 +28,7 @@ export default function ServiceCardTags({tags, isOpen, height}) {
     >
         {tags.map((tag, index) => (<div
             key={index}
-            className="flex items-center bg-ls-lightgrey font-mulish font-bold rounded-full"
+            className="flex items-center bg-ls-lightgrey font-mulish font-bold rounded-full text-nowrap"
             style={{
                 fontSize: 'clamp(0.875rem, 0.7635rem + 0.4575vw, 1.3125rem)',
                 paddingRight: 'clamp(0.9375rem, 0.4688rem + 1.5vw, 1.3125rem)',
