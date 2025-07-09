@@ -1,15 +1,7 @@
 import './App.css'
-import HomeSection from "./sections/HomeSection.jsx";
 import {useEffect, useState} from "react";
-import ServicesSection from "./sections/ServicesSection.jsx";
-import AboutUsSection from "./sections/AboutUsSection.jsx";
-import LoadingSection from "./sections/LoadingSection.jsx";
-import ProjectsSections from "./sections/ProjectsSections.jsx";
-import PartnersSection from "./sections/PartnersSection.jsx";
-import ReviewsSection from "./sections/ReviewsSection.jsx";
-import ToolsSection from "./sections/ToolsSection.jsx";
-import TeamSection from "./sections/TeamSection.jsx";
-import PhotosSection from "./sections/PhotosSection.jsx";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import HomePage from "./pages/HomePage.jsx";
 
 function App() {
     const [zoomStyle, setZoomStyle] = useState({});
@@ -34,38 +26,15 @@ function App() {
     }, []);
 
     return (
-        <div className={"font-unbounded bg-black"} style={zoomStyle} >
-
-
-            {loading && (
-                <LoadingSection
-                    onFinish={() => {
-                        sessionStorage.setItem("alreadyVisited", "true");
-                        setLoading(false);
-                    }}
+        <BrowserRouter>
+            <Routes>
+                <Route
+                    path="leet-soft-landing"
+                    element={<HomePage style={zoomStyle} loading={loading} setLoading={setLoading} />}
                 />
-            )}
+            </Routes>
 
-            <div
-                className={`
-                    transition-opacity duration-350 ease-in-out
-                    ${loading ? "opacity-0 pointer-events-none" : "opacity-100"}
-                `}
-                style={{
-                    visibility: loading ? "hidden" : "visible"
-                }}
-            >
-                <HomeSection/>
-                <ServicesSection/>
-                <AboutUsSection/>
-                <ProjectsSections/>
-                <PartnersSection/>
-                <ReviewsSection/>
-                <ToolsSection/>
-                <TeamSection/>
-                <PhotosSection/>
-            </div>
-        </div>
+        </BrowserRouter>
     )
 }
 

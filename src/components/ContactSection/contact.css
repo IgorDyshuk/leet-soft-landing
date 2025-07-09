@@ -1,0 +1,28 @@
+.contact-slogan {
+    max-width: clamp(21.25rem, 15.2588rem + 27.3885vw, 48.125rem);
+    height: clamp(26.875rem, 17.3036rem + 14.9554vw, 35.25rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 1.1083rem + 4.0764vw, 6rem);
+}
+
+.footer {
+    border-top: 1px solid #787878;
+}
+
+.contact-icon {
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-icon:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .contact-slogan {
+        height: fit-content;
+        margin-bottom: clamp(2.5rem, 1.5263rem + 4.451vw, 4.375rem);
+    }
+
+}
+

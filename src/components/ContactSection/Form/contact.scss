@@ -1,0 +1,75 @@
+.form {
+
+  &_container {
+
+    width: clamp(25.625rem, -0.0893rem + 40.1786vw, 48.125rem);
+
+  }
+}
+
+.input {
+  margin-bottom: clamp(1.5rem, 1.3885rem + 0.5096vw, 2rem);
+  width: 100%;
+  border-bottom: 1px solid white;
+  height: clamp(3.4375rem, 3.1867rem + 1.1465vw, 4.5625rem);
+  font-weight: 400;
+  font-size: clamp(1.0325rem, 0.9133rem + 0.4889vw, 1.5rem);;
+  color: white;
+  padding: 35px 0 clamp(1.25rem, 1.4172rem + -0.7643vw, 0.5rem);
+
+  &:placeholder-shown:focus ~ .input_placeholder {
+    display: block;
+  }
+
+  &:has([value=""]):not(:focus) ~ .input_placeholder {
+    display: block;
+  }
+
+  &:not([value=""]):not(:focus) ~ .input_placeholder {
+    display: none;
+  }
+
+  &:focus {
+
+    outline: none;
+  }
+
+  &:invalid:not([required]) + &_error {
+    display: block;
+  }
+
+  &[data-error="true"], &:invalid:not([required]) {
+    -webkit-box-shadow: 0 0 8px 0 rgba(244, 28, 54, 1);
+    box-shadow: 0 0 8px 0 rgba(244, 28, 54, 1);
+  }
+
+  &_container {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &:focus-within .input_placeholder {
+      display: none;
+    }
+  }
+
+  &_placeholder {
+    position: absolute;
+    bottom: clamp(2.3125rem, 2.1732rem + 0.6369vw, 2.9375rem);
+    color: white;
+    transition: all ease-in-out 0.15s;
+    font-size: clamp(1.0325rem, 0.9133rem + 0.4889vw, 1.5rem);
+  }
+}
+
+.input:hover,
+.input_placeholder:hover {
+  cursor: text;
+}
+
+
+@media (max-width: 1024px) {
+  .form_container {
+    width: 100%
+  }
+}

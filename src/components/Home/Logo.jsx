@@ -22,7 +22,7 @@ export default function Logo() {
     }, []);
 
     return (
-        <div className="flex items-center logo-spacing">
+        <div className="flex items-center logo-spacing uppercase">
             <img ref={logoRef} src={Logo1} alt="Logo"/>
             <span className="font-logo-clamp leading-[130%]">
                 leet<span className={"text-gradient-ls"}>soft</span>

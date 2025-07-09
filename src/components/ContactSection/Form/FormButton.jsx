@@ -1,23 +1,19 @@
-export default function ContactButton() {
+export default function FormButton() {
     return (
         <button
-            onClick={() => {
-                const target = document.getElementById("contact");
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            }}
+            type="submit"
             className="w-fit custom-card flex items-center py-[20px] px-[32px] rounded-2xl
                        hover: cursor-pointer"
             style={{
                 gap: "clamp(0.625rem, 0.4975rem + 0.5229vw, 1.125rem)",
-                padding: "clamp(0.9375rem, 0.8578rem + 0.3268vw, 1.25rem) clamp(1.5rem, 1.3725rem + 0.5229vw, 2rem)"
+                padding: "clamp(0.9375rem, 0.8578rem + 0.3268vw, 1.25rem) clamp(1.5rem, 1.3725rem + 0.5229vw, 2rem)",
+                marginTop: "10px",
             }}
         >
-            <span className="uppercase text-white"
+            <span className="uppercase text-white font-unbounded"
                   style={{fontSize: 'clamp(0.875rem, 0.7635rem + 0.4575vw, 1.3125rem)'}}
             >
-                contact us
+                get started
             </span>
             <svg
                 width="22"
