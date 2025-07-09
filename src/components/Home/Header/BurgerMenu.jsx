@@ -3,16 +3,16 @@ import {useEffect, useRef} from "react";
 export default function BurgerMenu({open, menuItems, setOpen}) {
     const dropdownRef = useRef(null);
 
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setOpen(false);
-            }
-        }
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
+    // useEffect(() => {
+    //     function handleClickOutside(event) {
+    //         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    //             setOpen(false);
+    //         }
+    //     }
+    //
+    //     document.addEventListener("mousedown", handleClickOutside);
+    //     return () => document.removeEventListener("mousedown", handleClickOutside);
+    // }, []);
 
     return (
         <div
