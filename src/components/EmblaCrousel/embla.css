@@ -8,6 +8,10 @@
     margin-top: clamp(1.9375rem, 1.8121rem + 0.5732vw, 2.5rem);
 }
 
+.embla-photos {
+    --slide-size: clamp(18.4375rem, 17.0303rem + 6.4331vw, 24.75rem);
+}
+
 .embla__viewport {
     overflow: hidden;
 }

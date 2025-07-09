@@ -1,6 +1,8 @@
 import React from 'react'
 import ProjectCard from "../Projects/ProjectCard.jsx";
 import ReviewCard from "../Reviews/ReviewCard.jsx";
+import {reviews} from "../Reviews/reviews.js";
+import PhotoCard from "../Photos/PhotoCard.jsx";
 
 const EmblaCarousel = ({emblaRef, items, styles, card}) => {
 
@@ -12,8 +14,10 @@ const EmblaCarousel = ({emblaRef, items, styles, card}) => {
                         <div className="embla__slide" key={item.id}>
                             {card === "project" ? (
                                 <ProjectCard item={item}/>
-                            ) : (
+                            ) : card === "review" ? (
                                 <ReviewCard item={item}/>
+                            ) : (
+                                <PhotoCard item={item}/>
                             )}
                         </div>
                     ))}
